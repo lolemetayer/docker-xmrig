@@ -1,12 +1,12 @@
-FROM ubuntu:xenial
+FROM ubuntu:focal
 
-ENV VERSION 2.4.3
+ENV VERSION 6.18.1
 
 RUN apt-get update && apt-get install -y wget
 
-RUN wget https://github.com/xmrig/xmrig/releases/download/v$VERSION/xmrig-$VERSION-gcc7-xenial-amd64-no-api.tar.gz
+RUN wget https://github.com/xmrig/xmrig/releases/download/v$VERSION/xmrig-$VERSION-focal-x64.tar.gz
 
-RUN tar -xvzf xmrig-$VERSION-gcc7-xenial-amd64-no-api.tar.gz
+RUN tar -xvzf xmrig-$VERSION-focal-x64.tar.gz
 
 ENV POOL pool.supportxmr.com:3333
 ENV USERNAME username
